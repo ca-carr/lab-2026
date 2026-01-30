@@ -1,2 +1,0 @@
-
-puzzle solution is: contract
