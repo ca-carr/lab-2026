@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>BEEM161 Token Lab</title>
+    <title>BEEM161 Admin</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <main class="container">
       <header class="header">
-        <h1>BEEM161 — Token Lab</h1>
-        <p class="muted">Connect wallet, load the token, transfer, and burn.</p>
+        <h1>BEEM161 — Admin</h1>
+        <p class="muted">Owner actions: pause/unpause and mint.</p>
       </header>
 
       <section class="card">
@@ -39,7 +39,7 @@
         </label>
 
         <p class="muted">
-          <a id="explorerLink" href="#" target="_blank" rel="noreferrer">View on Sepolia Etherscan</a>
+            <a id="explorerLink" href="#" target="_blank" rel="noreferrer">View on Sepolia Etherscan</a>
         </p>
 
 
@@ -48,59 +48,51 @@
         </div>
 
         <div class="kv">
-          <div><span class="k">Name</span><span id="tName" class="v">—</span></div>
-          <div><span class="k">Symbol</span><span id="tSymbol" class="v">—</span></div>
-          <div><span class="k">Decimals</span><span id="tDecimals" class="v">—</span></div>
-          <div><span class="k">Total Supply</span><span id="tSupply" class="v">—</span></div>
-          <div><span class="k">My Balance</span><span id="tBalance" class="v">—</span></div>
+          <div><span class="k">Owner</span><span id="tOwner" class="v">—</span></div>
+          <div><span class="k">Am I Owner?</span><span id="tAmOwner" class="v">—</span></div>
           <div><span class="k">Paused?</span><span id="tPaused" class="v">—</span></div>
+          <div><span class="k">Total Supply</span><span id="tSupply" class="v">—</span></div>
         </div>
 
         <p id="tokenMsg" class="muted"></p>
       </section>
 
       <section class="card">
-        <h2>3) Transfer</h2>
-
-        <label class="label">
-          To
-          <input id="toAddress" placeholder="0xRecipient..." />
-        </label>
-
-        <label class="label">
-          Amount (human units)
-          <input id="amount" placeholder="e.g. 25" />
-        </label>
-
+        <h2>3) Pause control (owner only)</h2>
         <div class="row">
-          <button id="btnTransfer">Send Transfer</button>
+          <button id="btnPause">Pause</button>
+          <button id="btnUnpause" class="secondary">Unpause</button>
         </div>
-
-        <p id="txMsg" class="muted"></p>
+        <p id="pauseMsg" class="muted"></p>
       </section>
 
       <section class="card">
-        <h2>4) Burn</h2>
+        <h2>4) Mint (owner only)</h2>
+
+        <label class="label">
+          To
+          <input id="mintTo" placeholder="0xRecipient..." />
+        </label>
 
         <label class="label">
           Amount (human units)
-          <input id="burnAmount" placeholder="e.g. 5" />
+          <input id="mintAmount" placeholder="e.g. 1000" />
         </label>
 
         <div class="row">
-          <button id="btnBurn" class="secondary">Burn</button>
+          <button id="btnMint">Mint</button>
         </div>
 
-        <p id="burnMsg" class="muted"></p>
+        <p id="mintMsg" class="muted"></p>
       </section>
 
       <footer class="footer">
-        <a href="../">← Back to portfolio</a>
+        <a href="./">← Back to token page</a>
         &nbsp;|&nbsp;
-        <a href="./admin.html">Admin page →</a>
+        <a href="../">Back to portfolio →</a>
       </footer>
     </main>
 
-    <script type="module" src="./erc20.js"></script>
+    <script type="module" src="./admin.js"></script>
   </body>
 </html>

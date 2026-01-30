@@ -3,28 +3,30 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>BEEM161 Token Lab</title>
+    <title>ERC-20 Token Lab</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <main class="container">
       <header class="header">
-        <h1>BEEM161 — Token Lab</h1>
-        <p class="muted">Connect wallet, load the token, transfer, and burn.</p>
+        <h1>ERC-20 Token Lab</h1>
+        <p class="muted">
+          Connect your wallet, read token info, and send tokens on the Sepolia testnet.
+        </p>
       </header>
 
       <section class="card">
         <h2>1) Wallet</h2>
+
         <div class="row">
           <button id="btnConnect">Connect MetaMask</button>
           <button id="btnSwitchSepolia" class="secondary">Switch to Sepolia</button>
-          <button id="btnRefresh" class="secondary">Refresh</button>
         </div>
 
         <div class="kv">
-          <div><span class="k">Network</span><span id="network" class="v">—</span></div>
-          <div><span class="k">Account</span><span id="account" class="v">—</span></div>
+          <div><span class="k">Network </span><span id="network" class="v">—</span></div>
+          <div><span class="k">Account </span><span id="account" class="v">—</span></div>
         </div>
 
         <p id="walletMsg" class="muted"></p>
@@ -34,26 +36,20 @@
         <h2>2) Token</h2>
 
         <label class="label">
-          Contract address (BEEM161)
+          Contract address
           <input id="tokenAddress" placeholder="0x..." />
         </label>
 
-        <p class="muted">
-          <a id="explorerLink" href="#" target="_blank" rel="noreferrer">View on Sepolia Etherscan</a>
-        </p>
-
-
         <div class="row">
-          <button id="btnLoadToken" class="secondary">Load Token</button>
+          <button id="btnLoadToken" class="secondary">Load Token </button>
         </div>
 
         <div class="kv">
-          <div><span class="k">Name</span><span id="tName" class="v">—</span></div>
-          <div><span class="k">Symbol</span><span id="tSymbol" class="v">—</span></div>
-          <div><span class="k">Decimals</span><span id="tDecimals" class="v">—</span></div>
-          <div><span class="k">Total Supply</span><span id="tSupply" class="v">—</span></div>
-          <div><span class="k">My Balance</span><span id="tBalance" class="v">—</span></div>
-          <div><span class="k">Paused?</span><span id="tPaused" class="v">—</span></div>
+          <div><span class="k">Name </span><span id="tName" class="v">—</span></div>
+          <div><span class="k">Symbol </span><span id="tSymbol" class="v">—</span></div>
+          <div><span class="k">Decimals </span><span id="tDecimals" class="v">—</span></div>
+          <div><span class="k">Total Supply </span><span id="tSupply" class="v">—</span></div>
+          <div><span class="k">Balance on Account </span><span id="tBalance" class="v">—</span></div>
         </div>
 
         <p id="tokenMsg" class="muted"></p>
@@ -68,7 +64,7 @@
         </label>
 
         <label class="label">
-          Amount (human units)
+          Amount
           <input id="amount" placeholder="e.g. 25" />
         </label>
 
@@ -80,24 +76,27 @@
       </section>
 
       <section class="card">
-        <h2>4) Burn</h2>
+        <h2>4) Approve (optional)</h2>
 
         <label class="label">
-          Amount (human units)
-          <input id="burnAmount" placeholder="e.g. 5" />
+          Spender
+          <input id="spender" placeholder="0xSpender..." />
+        </label>
+
+        <label class="label">
+          Allowance amount
+          <input id="allowAmount" placeholder="e.g. 1000" />
         </label>
 
         <div class="row">
-          <button id="btnBurn" class="secondary">Burn</button>
+          <button id="btnApprove" class="secondary">Approve</button>
         </div>
 
-        <p id="burnMsg" class="muted"></p>
+        <p id="approveMsg" class="muted"></p>
       </section>
 
       <footer class="footer">
         <a href="../">← Back to portfolio</a>
-        &nbsp;|&nbsp;
-        <a href="./admin.html">Admin page →</a>
       </footer>
     </main>
 

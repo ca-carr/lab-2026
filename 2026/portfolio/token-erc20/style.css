@@ -1,35 +1,52 @@
 :root {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
-    "Apple Color Emoji", "Segoe UI Emoji";
+  --bg: #e6dcdc;
+  --card: rgba(255, 255, 255, 0.85);
+  --text: #211e1e;
+  --muted: #6b6b6b;
+  --border: #333;
+  --accent: #9c175a;
+  --accent-2: #2a3145;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   margin: 0;
-  background: #0b0d12;
-  color: #e9eef7;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
 }
 
 .container {
+  width: 100%;
   max-width: 900px;
-  margin: 0 auto;
-  padding: 28px 16px 48px;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.25rem;
 }
 
 .header h1 {
-  margin: 0 0 6px;
-  font-size: 28px;
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  color: var(--accent);
 }
 
 .muted {
-  color: #aab4c5;
+  color: var(--muted);
 }
 
 .card {
-  margin-top: 16px;
-  padding: 16px;
-  background: #121624;
-  border: 1px solid #1c2233;
-  border-radius: 12px;
+  background: var(--card);
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-top: 1rem;
 }
 
 .row {
@@ -43,19 +60,25 @@ button {
   border: 0;
   padding: 10px 12px;
   border-radius: 10px;
-  background: #2b62ff;
+  background: var(--accent);
   color: white;
   cursor: pointer;
   font-weight: 600;
 }
 
 button.secondary {
-  background: #2a3145;
+  background: var(--accent-2);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .label {
   display: block;
   margin: 10px 0;
+  font-weight: 600;
 }
 
 input {
@@ -64,20 +87,21 @@ input {
   margin-top: 6px;
   padding: 10px 12px;
   border-radius: 10px;
-  border: 1px solid #28304a;
-  background: #0d1020;
-  color: #e9eef7;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
 }
 
 .kv {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 180px 1fr;
   gap: 8px 12px;
   margin-top: 10px;
 }
 
 .k {
-  color: #aab4c5;
+  color: var(--muted);
+  font-weight: 600;
 }
 
 .v {
@@ -90,6 +114,7 @@ input {
   margin-top: 18px;
 }
 .footer a {
-  color: #9db6ff;
+  color: var(--accent);
   text-decoration: none;
+  font-weight: 600;
 }
