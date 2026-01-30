@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ERC-20 Token Lab</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>ERC-20 Token Lab</h1>
+        <p class="muted">
+          Connect your wallet, read token info, and send tokens on a testnet.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>1) Wallet</h2>
+
+        <div class="row">
+          <button id="btnConnect">Connect MetaMask</button>
+          <button id="btnSwitchSepolia" class="secondary">Switch to Sepolia</button>
+        </div>
+
+        <div class="kv">
+          <div><span class="k">Network</span><span id="network" class="v">—</span></div>
+          <div><span class="k">Account</span><span id="account" class="v">—</span></div>
+        </div>
+
+        <p id="walletMsg" class="muted"></p>
+      </section>
+
+      <section class="card">
+        <h2>2) Token</h2>
+
+        <label class="label">
+          Contract address
+          <input id="tokenAddress" placeholder="0x..." />
+        </label>
+
+        <div class="row">
+          <button id="btnLoadToken" class="secondary">Load Token</button>
+        </div>
+
+        <div class="kv">
+          <div><span class="k">Name</span><span id="tName" class="v">—</span></div>
+          <div><span class="k">Symbol</span><span id="tSymbol" class="v">—</span></div>
+          <div><span class="k">Decimals</span><span id="tDecimals" class="v">—</span></div>
+          <div><span class="k">Total Supply</span><span id="tSupply" class="v">—</span></div>
+          <div><span class="k">My Balance</span><span id="tBalance" class="v">—</span></div>
+        </div>
+
+        <p id="tokenMsg" class="muted"></p>
+      </section>
+
+      <section class="card">
+        <h2>3) Transfer</h2>
+
+        <label class="label">
+          To
+          <input id="toAddress" placeholder="0xRecipient..." />
+        </label>
+
+        <label class="label">
+          Amount
+          <input id="amount" placeholder="e.g. 25" />
+        </label>
+
+        <div class="row">
+          <button id="btnTransfer">Send Transfer</button>
+        </div>
+
+        <p id="txMsg" class="muted"></p>
+      </section>
+
+      <section class="card">
+        <h2>4) Approve (optional)</h2>
+
+        <label class="label">
+          Spender
+          <input id="spender" placeholder="0xSpender..." />
+        </label>
+
+        <label class="label">
+          Allowance amount
+          <input id="allowAmount" placeholder="e.g. 1000" />
+        </label>
+
+        <div class="row">
+          <button id="btnApprove" class="secondary">Approve</button>
+        </div>
+
+        <p id="approveMsg" class="muted"></p>
+      </section>
+
+      <footer class="footer">
+        <a href="../">← Back to portfolio</a>
+      </footer>
+    </main>
+
+    <script type="module" src="./erc20.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+body {
+  margin: 0;
+  background: #0b0d12;
+  color: #e9eef7;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 16px 48px;
+}
+
+.header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.muted {
+  color: #aab4c5;
+}
+
+.card {
+  margin-top: 16px;
+  padding: 16px;
+  background: #121624;
+  border: 1px solid #1c2233;
+  border-radius: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+button {
+  border: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #2b62ff;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: #2a3145;
+}
+
+.label {
+  display: block;
+  margin: 10px 0;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #28304a;
+  background: #0d1020;
+  color: #e9eef7;
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 8px 12px;
+  margin-top: 10px;
+}
+
+.k {
+  color: #aab4c5;
+}
+
+.v {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  margin-top: 18px;
+}
+.footer a {
+  color: #9db6ff;
+  text-decoration: none;
+}
