@@ -1,7 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #e6dcdc;
+    color: #211e1e;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -20,11 +20,11 @@ header {
     padding-bottom: 2rem;
 }
 
-h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #4af626; /* Matrix Green */ }
+h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #9c175a; /* Matrix Green */ }
 .subtitle { color: #888; font-style: italic; }
 
 .card {
-    background-color: #1e1e1e;
+    background-color: #ffffffcc;
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid #333;
